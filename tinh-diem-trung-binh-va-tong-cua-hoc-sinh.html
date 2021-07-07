@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình và tổng điểm của học sinh</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+<!--    nhập điểm của từng môn học-->
+    var inputBylogy;
+    var inputPlysics;
+    var inputChemistry;
+
+    //nhập điểm từng môn học
+    inputBylogy = prompt('Nhập vào điểm môn sinh học');
+    inputPlysics = prompt('Nhập vào điểm môn vật lý');
+    inputChemistry = prompt('Nhập vào điểm môn hóa học');
+
+//    đổi biến
+    var bylogy = parseInt(inputBylogy);
+    var plysics = parseInt(inputPlysics);
+    var chemistry = parseInt(inputChemistry);
+
+//    tính toán
+    alert('Điểm trung bình của bạn là ' + (bylogy + plysics + chemistry)/3 + ' và tổng điểm của bạn là ' + (bylogy + plysics + chemistry))
+
+</script>
