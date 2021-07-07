@@ -5,12 +5,43 @@
     <title>Hiển thị đầu ra</title>
 </head>
 <body>
+<!--bai 1-->
     <button type="button" onclick="showMessage();">click me</button>
+
+<!--bai 2-->
+    <p id="message"></p>
+    <button type="button" onclick="showMessage2()";>click me</button>
+
+<!--bai 3-->
+    <button type="button" onclick="showMessage3();">click me</button>
+
+
+<!--bai 4-->
+    <button type="button" onclick="showMessage4();">click me</button>
+
+
 </body>
 </html>
 
 <script>
+<!--    bai 1-->
     function showMessage() {
-        alert('xin chào')
+        alert('xin chào');
     }
+
+//    bai 2
+    function showMessage2() {
+        document.getElementById('message').innerHTML = 'hello everybody';
+    }
+
+//    bai 3
+    function showMessage3() {
+        document.write('xin chao')
+    }
+
+// bai 4
+    function showMessage4() {
+        console.log('xin chao')
+    }
+
 </script>
