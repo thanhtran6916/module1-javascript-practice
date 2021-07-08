@@ -1,123 +1,122 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi tiền tệ</title>
 
     <style>
-        body {
+        * {
+            font-family: Tahoma;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            margin: 0 0 50px 0;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        select {
+            padding: 2px 32px;
+            margin: 0 28px;
+        }
+
+        .main {
             width: 100vw;
             height: 100vh;
         }
 
-        .currency {
-            width: 100%;
+        .app {
+            background-color: #22d5c6;
+            width: 80%;
             height: 70%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0 auto;
         }
 
-        .btn {
-            padding: 2px 28px;
+        button {
+            padding: 2px 8px;
         }
-
-        span {
-            color: blue;
-        }
-
-        #for-cur, #to-cur {
-            padding: 2px 28px;
-        }
-
     </style>
+
 </head>
 <body>
-<div class="currency">
-    <form action="">
-        <table cellpadding=" 10px">
-            <tr>
-                <th>Amount</th>
-                <th>From Currency</th>
-                <th>To Currency</th>
-            </tr>
-            <!---->
-            <tr>
-                <td><input type="text" name="amount" id="number"></td>
-                <td>
-                    <select name="form-currency" id="for-cur">
-                        <option value="vnd">Việt Nam</option>
-                        <option value="usd">USD</option>
-                    </select>
+ <div class="main">
+    <div class="app">
+        <h1>ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</h1>
+        <form action="">
+            <table cellspacing=8px">
+                <tr>
+                    <th>Amount</th>
+                    <th>From Currency</th>
+                    <th>To Currency</th>
+                </tr>
 
-                </td>
-                <td>
-                    <select name="to-curency" id="to-cur">
-                        <option value="vnd">Việt Nam</option>
-                        <option value="usd">USD</option>
-                    </select>
-                </td>
-                <td><button type="button" class="btn" onclick="convert()">Convert</button></td>
-            </tr>
+                <tr>
+                    <td>
+                        <input id="amount" type="text" name="amount">
+                    </td>
+                    <td>
+                        <select id="from-cur">
+                            <option value="vnd">Việt Nam</option>
+                            <option value="usd">Usd</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="to-cur">
+                            <option value="vnd">Việt Nam</option>
+                            <option value="usd">Usd</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button onclick="convert()" type="button">Convert</button>
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <span>Result:</span>
-                    <span id="result"></span>
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
+                <tr>
+                    <td>
+                        <span>Result:</span>
+                        <span id="result"></span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
-<script>
-    // function convert(){
-    //     let a = document.getElementById('number').value;
-    //
-    //     let b =
-    //     console.log(a)
-    // }
+ </div>
 
-    function convert() {
+ <script>
 
-        let inputA = document.getElementById('number').value;
+     function convert() {
+         let a = document.getElementById("amount").value;
+         let x = parseInt(a);
+         let b = document.getElementById("from-cur").value;
+         let c = document.getElementById("to-cur").value;
 
-        //biến a là giá trị của tiền
-        let a = parseInt(inputA);
+         if (b === "vnd" && c === "vnd") {
+             document.getElementById("result").innerHTML = x + " VND";
+         }
 
-        //biến c là loại tiền nhập vào
-        let c = document.getElementById('for-cur').value;
+         if (b === "usd" && c === "usd") {
+             document.getElementById("result").innerHTML = x + " USD";
+         }
+
+         if (b === "vnd" && c === "usd") {
+             document.getElementById("result").innerHTML = x / 24000 + " USD";
+         }
+         if (b === "usd" && c === "vnd") {
+             document.getElementById("result").innerHTML = x * 24000 + " VND";
+         }
+     }
 
 
-        //biến d là loại tiền muốn chuyển đổi
-        let d = document.getElementById("to-cur").value;
-
-
-        if (c === "usd" && d === "vnd") {
-            let b = a * 24000;
-            document.getElementById('result').innerHTML = b;
-        }
-
-        if (c === "usd" && d === "usd") {
-            let b = a;
-            document.getElementById("result").innerHTML = b;
-        }
-
-        if (c === "vnd" && d === "usd") {
-            let b = a / 24000;
-            document.getElementById("result").innerHTML = b;
-        }
-
-        if (c === "vnd" && d === "vnd") {
-            let b = a;
-            document.getElementById("result").innerHTML = b;
-        }
-
-    }
-
-</script>
-
+ </script>
 </body>
 </html>
