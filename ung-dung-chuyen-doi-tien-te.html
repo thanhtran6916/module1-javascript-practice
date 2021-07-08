@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .currency {
+            width: 100%;
+            height: 70%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 2px 28px;
+        }
+
+        span {
+            color: blue;
+        }
+
+        #for-cur, #to-cur {
+            padding: 2px 28px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="currency">
+    <form action="">
+        <table cellpadding=" 10px">
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <!---->
+            <tr>
+                <td><input type="text" name="amount" id="number"></td>
+                <td>
+                    <select name="form-currency" id="for-cur">
+                        <option value="vnd">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+
+                </td>
+                <td>
+                    <select name="to-curency" id="to-cur">
+                        <option value="vnd">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </td>
+                <td><button type="button" class="btn" onclick="convert()">Convert</button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span>Result:</span>
+                    <span id="result"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    // function convert(){
+    //     let a = document.getElementById('number').value;
+    //
+    //     let b =
+    //     console.log(a)
+    // }
+
+    function convert() {
+
+        let inputA = document.getElementById('number').value;
+
+        //biến a là giá trị của tiền
+        let a = parseInt(inputA);
+
+        //biến c là loại tiền nhập vào
+        let c = document.getElementById('for-cur').value;
+
+
+        //biến d là loại tiền muốn chuyển đổi
+        let d = document.getElementById("to-cur").value;
+
+
+        if (c === "usd" && d === "vnd") {
+            let b = a * 24000;
+            document.getElementById('result').innerHTML = b;
+        }
+
+        if (c === "usd" && d === "usd") {
+            let b = a;
+            document.getElementById("result").innerHTML = b;
+        }
+
+        if (c === "vnd" && d === "usd") {
+            let b = a / 24000;
+            document.getElementById("result").innerHTML = b;
+        }
+
+        if (c === "vnd" && d === "vnd") {
+            let b = a;
+            document.getElementById("result").innerHTML = b;
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

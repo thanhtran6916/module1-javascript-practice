@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .currency {
+            width: 100%;
+            height: 70%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 2px 28px;
+        }
+
+        p {
+            color: blue;
+        }
+
+        #form-cur, #to-cur {
+            padding: 2px 28px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="currency">
+    <input type="text" name="amount" id="number">
+    <button onclick="convert()">Convert</button>
+<!--    <form action="">-->
+<!--        <table cellpadding=" 10px">-->
+<!--            <tr>-->
+<!--                <th>Amount</th>-->
+<!--                <th>From Currency</th>-->
+<!--                <th>To Currency</th>-->
+<!--            </tr>-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--            <tr>-->
+<!--                <td></td>-->
+<!--                <td>-->
+<!--                    <select name="form-currency" id="form-cur">-->
+<!--                        <option value="vnd">Việt Nam</option>-->
+<!--                        <option value="usd">USD</option>-->
+<!--                    </select>-->
+
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <select name="to-curency" id="to-cur">-->
+<!--                        <option value="vnd">Việt Nam</option>-->
+<!--                        <option value="usd">USD</option>-->
+<!--                    </select>-->
+<!--                </td>-->
+<!--                <td></td>-->
+<!--            </tr>-->
+
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <p>Result:</p>-->
+<!--                    <p id="result"></p>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+</div>
+</body>
+</html>
+
+<script>
+
+    function convert(){
+        var A = document.getElementById('number').value;
+        console.log('A = ',A);
+    }
+</script>
