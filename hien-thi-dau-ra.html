@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Hiển thị đầu ra</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-<!--bai 1-->
-    <button type="button" onclick="showMessage();">click me</button>
-
-<!--bai 2-->
-    <p id="message"></p>
-    <button type="button" onclick="showMessage2()";>click me</button>
-
-<!--bai 3-->
-    <button type="button" onclick="showMessage3();">click me</button>
-
-
-<!--bai 4-->
-    <button type="button" onclick="showMessage4();">click me</button>
-
 
 </body>
 </html>
 
 <script>
 <!--    bai 1-->
-    function showMessage() {
-        alert('xin chào');
-    }
+    var i = 10;
+    var f = 20.5;
+    var b = true;
+    var s = 'Hà Nội';
 
-//    bai 2
-    function showMessage2() {
-        document.getElementById('message').innerHTML = 'hello everybody';
-    }
+    document.write('i = ' + i + '</br>')
+    document.write('f = ' + f + '</br>')
+    document.write('b = ' + b + '</br>')
+    document.write('s = ' + s + '</br>')
 
-//    bai 3
-    function showMessage3() {
-        document.write('xin chao')
-    }
 
-// bai 4
-    function showMessage4() {
-        console.log('xin chao')
-    }
+    //bai 2
+    var r = 20;
+    var d = 30;
 
-</script>
+    document.write('s = ' + r*d + '</br>')
 
-<script>
 
-<!--    khai báo biến a và b-->
-    var a, b;
-
-    // lấy giá trị từ người dùng
+    //bai 3
+    var a,b;
     a = prompt('nhap vao so a');
     b = prompt('nhap vao so b');
 
-    //đổi sang kiểu number
-    a = parseInt(a);
-    b = parseInt(b);
+    // parseInt(a);
+    // parseInt(b);
 
-    //tính tổng a và b
-
-    if (a%b===0) {
-        alert('a chia hết cho b');
+    if (a % b === 0) {
+        alert('so a chia het cho so b');
     }
     else {
-        alert('a không chia hết cho b')
+        alert('so a khong chia het cho so b');
     }
+
 
 </script>

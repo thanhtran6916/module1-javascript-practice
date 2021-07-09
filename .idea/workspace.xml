@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a37e0c4-b993-4de8-a985-1b01a8b1f9f2" name="Default Changelist" comment="">
+    <list default="true" id="ac536923-de8c-41f8-846f-c828c72eb9b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hien-thi-dau-ra.html" beforeDir="false" afterPath="$PROJECT_DIR$/hien-thi-dau-ra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ung-dung-chuyen-doi-tien-te.html" beforeDir="false" afterPath="$PROJECT_DIR$/ung-dung-chuyen-doi-tien-te.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,15 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1uzQWAtTReuH6X6fX9cQsTdC4zW" />
+  <component name="ProjectId" id="1v1eea4OtaQHd0BQY9H0wljPdeq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,21 +23,36 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8a37e0c4-b993-4de8-a985-1b01a8b1f9f2" name="Default Changelist" comment="" />
-      <created>1625665968094</created>
+      <changelist id="ac536923-de8c-41f8-846f-c828c72eb9b8" name="Default Changelist" comment="" />
+      <created>1625734118270</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1625665968094</updated>
-      <workItem from="1625665972187" duration="1051000" />
+      <updated>1625734118270</updated>
+      <workItem from="1625734119489" duration="5795000" />
+      <workItem from="1625754041842" duration="4154000" />
+      <workItem from="1625793147361" duration="1043000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -4,55 +4,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chuyển đổi tiền tệ</title>
-
+    <title>Document</title>
     <style>
         * {
             font-family: Tahoma;
-            margin: 0;
+            padding: 0;
+        }
+
+
+        .main {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+
         }
 
         h1 {
             text-align: center;
-            color: blue;
-            margin: 0 0 50px 0;
         }
-
-        form {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-        }
-
         select {
-            padding: 2px 32px;
-            margin: 0 28px;
+            padding: 1px 38px;
+            margin: 20px 10px;
         }
 
-        .main {
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .app {
-            background-color: #22d5c6;
-            width: 80%;
-            height: 70%;
-            margin: 0 auto;
+        input {
+            margin-right: 10px;
         }
 
         button {
-            padding: 2px 8px;
+            padding: 1px 20px;
+            margin-left: 10px;
         }
     </style>
-
 </head>
 <body>
- <div class="main">
-    <div class="app">
-        <h1>ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</h1>
+    <h1>ỨNG DỤNG CHUYỂN ĐỔI NHIỆT ĐỘ</h1>
+    <div class="main">
         <form action="">
-            <table cellspacing=8px">
+            <table>
                 <tr>
                     <th>Amount</th>
                     <th>From Currency</th>
@@ -64,22 +53,21 @@
                         <input id="amount" type="text" name="amount">
                     </td>
                     <td>
-                        <select id="from-cur">
-                            <option value="vnd">Việt Nam</option>
-                            <option value="usd">Usd</option>
+                        <select name="" id="from-cur">
+                            <option value="vn">Việt Nam</option>
+                            <option value="usd">USD</option>
                         </select>
                     </td>
                     <td>
-                        <select id="to-cur">
-                            <option value="vnd">Việt Nam</option>
-                            <option value="usd">Usd</option>
+                        <select name="" id="to-cur">
+                            <option value="vn">Việt Nam</option>
+                            <option value="usd">USD</option>
                         </select>
                     </td>
                     <td>
                         <button onclick="convert()" type="button">Convert</button>
                     </td>
                 </tr>
-
                 <tr>
                     <td>
                         <span>Result:</span>
@@ -90,33 +78,83 @@
         </form>
     </div>
 
- </div>
-
- <script>
-
-     function convert() {
-         let a = document.getElementById("amount").value;
-         let x = parseInt(a);
-         let b = document.getElementById("from-cur").value;
-         let c = document.getElementById("to-cur").value;
-
-         if (b === "vnd" && c === "vnd") {
-             document.getElementById("result").innerHTML = x + " VND";
-         }
-
-         if (b === "usd" && c === "usd") {
-             document.getElementById("result").innerHTML = x + " USD";
-         }
-
-         if (b === "vnd" && c === "usd") {
-             document.getElementById("result").innerHTML = x / 24000 + " USD";
-         }
-         if (b === "usd" && c === "vnd") {
-             document.getElementById("result").innerHTML = x * 24000 + " VND";
-         }
-     }
+    <script>
+        function  convert() {
+            let a = document.getElementById("amount").value;
+            let x = parseInt(a);
+            let b = document.getElementById("from-cur").value;
+            let c = document.getElementById("to-cur").value;
 
 
- </script>
+            if (typeof x !== "number") {
+                if (b === "usd" && c === "usd") {
+                    document.getElementById("result").innerHTML = x + " USD";
+                    console.log(typeof x);
+                }
+
+                if (b === "vn" && c === "vn") {
+                    document.getElementById("result").innerHTML = x + " VND";
+                }
+
+                if (b === "usd" && c === "vn") {
+                    document.getElementById("result").innerHTML = x * 24000 + " VND";
+                }
+                if (b === "vn" && c === "usd") {
+                    document.getElementById("result").innerHTML = x / 24000 + " USD"
+                }
+            } else {
+                document.getElementById("result").innerHTML = " Giá trị của bạn không hợp lệ";
+            }
+        }
+
+        //     var money = document.getElementById("amount").value;
+        //     var x = parseInt(money);
+        //     switch (x) {
+        //         case 2000:
+        //             console.log("tra da");
+        //             break;
+        //         case 10000:
+        //             console.log("cofee");
+        //             break;
+        //         default:
+        //             console.log("khong hop le")
+        //     }
+        //
+        //
+        // }
+
+        // switch (day){
+        //     case 0:
+        //         document.write("Chủ Nhật");
+        //         break;
+        //     case 1:
+        //         document.write("Thứ hai");
+        //         break;
+        //     case 2:
+        //         document.write("Thứ ba");
+        //         break;
+        //     case 3:
+        //         document.write("Thứ tư");
+        //         break;
+        //     case 4:
+        //         document.write("Thứ năm");
+        //         break;
+        //     case 5:
+        //         document.write("Thứ sáu");
+        //         break;
+        //     case 6:
+        //         document.write("Thứ bảy");
+        //         break;
+        // }
+
+
+        // var number1 = prompt("nhap vao so thu nhat");
+        // var number2 = prompt("nhap vao so thu hai");
+        // var maxValue = number1 > number2? number1 : number2;
+        // console.log(maxValue)
+
+
+
+    </script>
 </body>
 </html>
