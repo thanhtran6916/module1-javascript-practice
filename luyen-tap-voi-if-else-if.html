@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với if-else-if</title>
+</head>
+<body>
+
+<script>
+    let signInName = prompt("Mời bạn đăng nhập Tên");
+    if (signInName == "Admin") {
+        let signInPassword = prompt("Mời bạn nhập Mật khẩu");
+        if (signInPassword == "TheMaster") {
+            alert("Welcome");
+        } else if (signInPassword == "null") {
+            alert("Canceled");
+        } else {
+            alert("Wrong password");
+        }
+    } else if (signInName == "null") {
+        alert("Canceled");
+    } else {
+        alert("\"I don't now you\"");
+    }
+
+
+</script>
+</body>
+</html>
