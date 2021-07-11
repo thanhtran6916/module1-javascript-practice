@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính đơn giản</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    form {
+      width: 46vw;
+      height: 48vh;
+      background-color: #ccc;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+    }
+
+    table {
+      margin: 0 auto;
+      background-color: white;
+    }
+
+    h1 {
+      letter-spacing: 3.2px;
+      text-align: center;
+      margin: 32px;
+      font-size: 40px;
+    }
+
+
+    button {
+      width: 110px;
+      height: 30px;
+    }
+
+    input {
+      width: 218px;
+      height: 30px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+    <form action="">
+      <h1>Caculator</h1>
+      <table>
+<!--nhap gia tri-->
+        <tr>
+          <td colspan="2">
+            <input type="text" id="input-a">
+          </td>
+          <td colspan="2">
+            <input type="text" id="input-b">
+          </td>
+        </tr>
+
+<!--phep tinh-->
+        <tr>
+          <td>
+            <button type="button" onclick="addition()">Addition(+)</button>
+          </td>
+          <td>
+            <button type="button" onclick="subtraction()">Subtraction(-)</button>
+          </td>
+          <td>
+            <button type="button" onclick="multiplication()">Multiplication(X)</button>
+          </td>
+          <td>
+            <button type="button" onclick="division()">Division(/)</button>
+          </td>
+        </tr>
+
+<!--ket qua-->
+        <tr>
+          <td colspan="4">
+            <p>
+              Result Division:
+              <span id="result"></span>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+<!---->
+    <script>
+
+      function addition() {
+        let inputA = document.getElementById('input-a').value;
+        let inputB = document.getElementById('input-b').value;
+        document.getElementById('result').innerHTML = parseInt(inputA) + parseInt(inputB);
+      }
+
+      function subtraction() {
+        let inputA = document.getElementById('input-a').value;
+        let inputB = document.getElementById('input-b').value;
+        document.getElementById('result').innerHTML = parseInt(inputA) - parseInt(inputB);
+      }
+
+      function multiplication() {
+        let inputA = document.getElementById('input-a').value;
+        let inputB = document.getElementById('input-b').value;
+        document.getElementById('result').innerHTML = parseInt(inputA) * parseInt(inputB);
+      }
+
+      function division() {
+        let inputA = document.getElementById('input-a').value;
+        let inputB = document.getElementById('input-b').value;
+        document.getElementById('result').innerHTML = parseInt(inputA) / parseInt(inputB);
+      }
+
+
+
+
+    </script>
+
+</body>
+</html>
