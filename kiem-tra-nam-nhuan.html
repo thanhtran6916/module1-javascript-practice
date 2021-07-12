@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+
+
+<script>
+  let inputYear = prompt("Mời bạn nhập vào số năm");
+
+  let isAdivitionby4 = inputYear % 4;
+  let isAdivitionby100 = inputYear % 100;
+  let isAdivitionby400 = inputYear % 400;
+
+  if ((isAdivitionby4 === 0 && isAdivitionby100 != 0) || (isAdivitionby100 === 0 && isAdivitionby400 === 0)) {
+    alert("Đó là năm nhuận");
+  } else {
+    alert("Đó là năm không nhuận")
+  }
+
+
+
+</script>
+</body>
+</html>
