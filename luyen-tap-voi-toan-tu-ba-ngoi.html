@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với toán tử ba ngôi</title>
+</head>
+<body>
+
+
+<script>
+//  Bài 1
+
+  //  Input A,B
+  let inputA = prompt("Nhập vào giá trị A");
+  let inputB = prompt("Nhập vào giá trị B");
+
+  //gán kết quả cho biến result
+  let result = (inputA + inputB) < "4" ? "Below" : "Over";
+
+  //hiển thị result
+  alert(result);
+
+
+// Bài 2
+    let input = prompt("Mời bạn nhập vào");
+
+    let employee = "Employee";
+    let director = "Director";
+    let noLogin = "No login";
+    let nothing = "";
+
+    let result2 = input === employee ? "Employee" : (input === director ? "Director" : (input === noLogin ? "No login" : ""));
+    alert(result2);
+
+</script>
+</body>
+</html>
