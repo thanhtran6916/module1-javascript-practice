@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc switch-case</title>
+</head>
+<body>
+
+
+<script>
+
+<!--  Bài 1-->
+  let browser = prompt();
+  switch (browser) {
+    case 'Edge':
+      alert("You've got the Edge!");
+      break;
+    case 'Chrome':
+    case 'Firefox':
+    case 'Safari':
+    case 'Opera':
+      alert("Okay we support these browsers too");
+      break;
+    default:
+      alert("We hope that this page looks ok!");
+
+  }
+
+
+//  bài 2
+  let a = prompt("a?", "");
+  switch (a) {
+    case "0":
+      alert("0");
+      break;
+    case "1":
+      alert("1");
+      break;
+    case "3":
+    case "2":
+      alert("2,3");
+      break;
+  }
+
+//Bài 3
+  let inputNumber = prompt("Nhập vào một số");
+  if (inputNumber > 0) {
+    alert("1");
+  } else  if (inputNumber < 0) {
+    alert("-1");
+  } else {
+    alert('0')
+  }
+
+
+  //Cách 2
+  let input = prompt("Nhập vào một số nữa");
+  let isPositive = input > 0;
+  let isNegative = input < 0;
+
+  switch (true) {
+    case isPositive:
+      alert("1");
+      break;
+    case isNegative:
+        alert("-1");
+      break;
+    default:
+      alert("0");
+  }
+
+
+
+</script>
+</body>
+</html>
