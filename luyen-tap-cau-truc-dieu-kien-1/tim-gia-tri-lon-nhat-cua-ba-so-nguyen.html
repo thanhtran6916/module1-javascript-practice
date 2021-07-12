@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất của ba số nguyên</title>
+</head>
+<body>
+
+
+<script>
+  let inputA = parseInt(prompt("Nhập vào số thứ nhât"));
+  let inputB = parseInt(prompt("Nhập vào số thứ hai"));
+  let inputC = parseInt(prompt("Nhập vào số thứ ba"));
+
+  if (inputA === inputB && inputA === inputC) {
+    alert("Ba số có giá trị bằng nhau");
+  } else if (inputA === inputB && inputA > inputC) {
+    alert("Số A bằng số B và là hai số lớn nhất");
+  } else if (inputA === inputC && inputA > inputB) {
+    alert("Số A bằng số B và là hai số lớn nhất");
+  } else if (inputA > inputB && inputA > inputC) {
+    alert("Số A là số lớn nhất");
+  } else if (inputA === inputB && inputB > inputC) {
+    alert("Số A bằng số B và là hai số lớn nhất");
+  } else if (inputB === inputC && inputB > inputA) {
+    alert("Số B bằng số C và là hai số lớn nhất");
+  } else if (inputB > inputA && inputB > inputC) {
+    alert("Số B là số lớn nhất");
+  } else if (inputC === inputA && inputC > inputB) {
+    alert("Số C bằng số A và là hai số lớn nhất");
+  } else if (inputC === inputB && inputC > inputB) {
+    alert("Số C bằng số B và là hai số lớn nhất");
+  } else if (inputC > inputA && inputC > inputB) {
+    alert("Số C là số lớn nhất");
+  }
+
+
+
+
+</script>
+</body>
+</html>

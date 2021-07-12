@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng dựa trên doanh số bán hàng</title>
+</head>
+<body>
+
+
+<script>
+  let input = parseInt(prompt("Nhập vào doanh số bán hàng"));
+
+  let fristClass = input * 0.03;
+  let secondClass = input * 0.02;
+  let thirtClass = input * 0.01;
+
+  if (input > 3e6) {
+    alert(`Chúc Mừng bạn đã nhận được ${fristClass}`);
+  } else if (input > 2e6) {
+    alert(`Chúc Mừng bạn đã nhận được ${secondClass}`);
+  } else if (input > 1e6) {
+    alert(`Chúc Mừng bạn đã nhận được ${thirtClass}`);
+  }
+
+
+</script>
+</body>
+</html>
