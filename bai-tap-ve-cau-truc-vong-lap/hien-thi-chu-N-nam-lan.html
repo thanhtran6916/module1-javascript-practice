@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị chữ N năm lần</title>
+</head>
+<body>
+
+
+    <p id="demo"></p>
+
+    <script>
+        function demo(){
+            let text = "";
+            for ( let i = 0; i < 5; i++) {
+                text += "The number is " + i + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        demo();
+    </script>
+</body>
+</html>
