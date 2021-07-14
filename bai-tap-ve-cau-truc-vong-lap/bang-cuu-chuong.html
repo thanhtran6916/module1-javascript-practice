@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng cửu chương</title>
+</head>
+<body>
+<script>
+  let table = "<table style='border: solid 1px black'>";
+  for (let j = 1; j <= 10; j++) {
+    table += "<tr>"
+    for (let i = 1; i <= 10; i++) {
+      table += "<td width='100px' style='border: solid 1px black'>" + `${j} x ${i} = ${j * i}` +"</td>"
+    }
+    table += "</tr>"
+  }
+  table += "</table>";
+
+  document.write(table);
+</script>
+</body>
+</html>
